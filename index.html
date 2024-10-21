@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DairyDelights - E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">DairyDelights</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="javascript:void(0);" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to DairyDelights!</h1>
+        <p>Your one-stop shop for every dairy delight!</p>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product Cards -->
+            <div class="product-card" data-name="Milk" data-price="35">
+                <img src="assets/milk.jpg" alt="Milk">
+                <h3>Milk</h3>
+                <p class="description">The wholesome liquid that fuels your day.</p>
+                <p class="price">M.R.P ₹35</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Milk">-</button>
+                    <span class="quantity-display" data-name="Milk">0</span>
+                    <button class="increase-quantity" data-name="Milk">+</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Butter" data-price="60">
+                <img src="assets/butter.jpeg" alt="Butter">
+                <h3>Butter</h3>
+                <p class="description">Rich, creamy, and perfect for spreading or cooking.</p>
+                <p class="price">M.R.P ₹60</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Butter">-</button>
+                    <span class="quantity-display" data-name="Butter">0</span>
+                    <button class="increase-quantity" data-name="Butter">+</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Cheese" data-price="150">
+                <img src="assets/cheese.jpeg" alt="Cheese">
+                <h3>Cheese</h3>
+                <p class="description">A versatile favorite in countless varieties and flavors.</p>
+                <p class="price">M.R.P ₹150</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Cheese">-</button>
+                    <span class="quantity-display" data-name="Cheese">0</span>
+                    <button class="increase-quantity" data-name="Cheese">+</button>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card" data-name="Yogurt" data-price="70">
+                <img src="assets/yogurt.jpeg" alt="Yogurt">
+                <h3>Yogurt </h3>
+                <p class="description">"Creamy goodness packed with probiotics for a healthy gut."</p>
+                <p class="price">M.R.P ₹70.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Yogurt">-</button>
+                    <span class="quantity-display" data-name="Yogurt">0</span>
+                    <button class="increase-quantity" data-name="Yogurt">+</button>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="product-card" data-name="Cream" data-price="180">
+                <img src="assets/cream.jpeg" alt="Cream">
+                <h3>Cream</h3>
+                <p class="description">"Luxurious and smooth, ideal for desserts and cooking."</p>
+                <p class="price">M.R.P ₹180.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Cream">-</button>
+                    <span class="quantity-display" data-name="Cream">0</span>
+                    <button class="increase-quantity" data-name="Cream">+</button>
+                </div>
+
+            
+            </div>
+            <!-- Product Card 6 -->
+            <div class="product-card" data-name="Sour Cream" data-price="150">
+                <img src="assets/sour cream.jpeg" alt="Sour Cream">
+                <h3>Sour Cream</h3>
+                <p class="description">"Tangy and thick, a perfect topping for savory dishes."</p>
+                <p class="price">M.R.P ₹150.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Sour Cream">-</button>
+                    <span class="quantity-display" data-name="Sour Cream">0</span>
+                    <button class="increase-quantity" data-name="Sour Cream">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 7 -->
+            <div class="product-card" data-name="Cottage Cheese" data-price="130">
+                <img src="assets/cottage.jpeg" alt="Cottage Cheese">
+                <h3>Cottage Cheese</h3>
+                <p class="description">"Light, nutritious, and high in protein."</p>
+                <p class="price">M.R.P ₹130.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Cottage Cheese">-</button>
+                    <span class="quantity-display" data-name="Cottage Cheese">0</span>
+                    <button class="increase-quantity" data-name="Cottage Cheese">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 8 -->
+            <div class="product-card" data-name="Buttermilk" data-price="30">
+                <img src="assets/buttermilk.jpeg" alt="Buttermilk">
+                <h3>Buttermilk </h3>
+                <p class="description">"Tangy liquid ideal for baking and marinating."</p>
+                <p class="price">M.R.P ₹30.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Buttermilk">-</button>
+                    <span class="quantity-display" data-name="Buttermilk">0</span>
+                    <button class="increase-quantity" data-name="Buttermilk">+</button>
+                </div>
+
+               
+            </div>
+            <!-- Product Card 9 -->
+            <div class="product-card" data-name="Ghee" data-price="300">
+                <img src="assets/ghee.jpeg" alt="Ghee">
+                <h3>Ghee</h3>
+                <p class="description">"Clarified butter, rich in flavor and tradition."</p>
+                <p class="price">M.R.P ₹300.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Ghee">-</button>
+                    <span class="quantity-display" data-name="Ghee">0</span>
+                    <button class="increase-quantity" data-name="Ghee">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 10 -->
+            <div class="product-card" data-name="Ice Cream" data-price="50">
+                <img src="assets/ice_cream.jpeg" alt="Ice Cream">
+                <h3>Ice Cream</h3>
+                <p class="description">"A cold, creamy treat to satisfy every sweet craving."</p>
+                <p class="price">M.R.P ₹50.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Ice Cream">-</button>
+                    <span class="quantity-display" data-name="Ice Creame">0</span>
+                    <button class="increase-quantity" data-name="Ice Cream">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 11 -->
+            <div class="product-card" data-name="Cream Cheese" data-price="150">
+                <img src="assets/cc.jpeg" alt="Cream Cheese">
+                <h3>Cream Cheese </h3>
+                <p class="description">"Smooth and spreadable, a bagel’s best friend."</p>
+                <p class="price">M.R.P ₹150.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Cream Cheese">-</button>
+                    <span class="quantity-display" data-name="Cream Cheese">0</span>
+                    <button class="increase-quantity" data-name="Cream Cheese">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 12 -->
+            <div class="product-card" data-name="Kefir" data-price="130">
+                <img src="assets/kefir.jpeg" alt="Kefir">
+                <h3>Kefir</h3>
+                <p class="description"> "A probiotic-packed drink for a healthy digestive boost."</p>
+                <p class="price">M.R.P ₹130.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Kefir">-</button>
+                    <span class="quantity-display" data-name="Kefir">0</span>
+                    <button class="increase-quantity" data-name="Kefir">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 13 -->
+            <div class="product-card" data-name="Condensed Milk" data-price="120">
+                <img src="assets/cmilk.jpeg" alt="Condensed Milk">
+                <h3>Condensed Milk</h3>
+                <p class="description">"Sweetened milk for rich, indulgent desserts."</p>
+                <p class="price">M.R.P ₹120.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Condensed Milk">-</button>
+                    <span class="quantity-display" data-name="Condensed Milk">0</span>
+                    <button class="increase-quantity" data-name="Condensed Milk">+</button>
+                </div>
+            </div>
+            <!-- Product Card 14 -->
+            <div class="product-card" data-name="Powdered Milk" data-price="100">
+                <img src="assets/pmilk.jpeg" alt="Powdered Milk">
+                <h3>Powdered Milk</h3>
+                <p class="description">"Convenient, shelf-stable milk for on-the-go needs."</p>
+                <p class="price">M.R.P ₹100.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Powdered Milk">-</button>
+                    <span class="quantity-display" data-name="Powdered Milk">0</span>
+                    <button class="increase-quantity" data-name="Powdered Milk">+</button>
+                </div>
+
+                
+            </div>
+            <!-- Product Card 15 -->
+            <div class="product-card" data-name="Whey Protein" data-price="3000">
+                <img src="assets/wp.jpeg" alt="Whey Protein">
+                <h3>Whey Protein </h3>
+                <p class="description">"The perfect supplement for muscle recovery and fitness."</p>
+                <p class="price">M.R.P ₹3000.00</p>
+                <div class="quantity-info">
+                    <button class="decrease-quantity" data-name="Whey Protein">-</button>
+                    <span class="quantity-display" data-name="Whey Protein">0</span>
+                    <button class="increase-quantity" data-name="Whey Protein">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <h2>Your Cart</h2>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Cost: <span id="total-cost">0.00</span></p>
+        </div>
+        <button class="checkout">Checkout</button>
+        <button class="close-cart" onclick="toggleCart()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
